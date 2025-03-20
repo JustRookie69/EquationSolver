@@ -57,7 +57,7 @@ func SolveEquation(equation string) (*MatrixResponse, error) {
 	apiKey := os.Getenv("GEMINI_API_KEY")
 	if apiKey == "" {
 		// For testing purposes only, not recommended for production
-		apiKey = "AIzaSyASNOAB6Bw-hGsP418JkwQCrbhY-_8LTVk" // Replace with your actual API key if needed
+		apiKey = "asdlowdmasnd-asdmsakdmska-_0lasdk" // Replace with your actual API key if needed
 	}
 
 	// Initialize the Gemini client
