@@ -11,14 +11,14 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const mongoURI = "mongodb+srv://Learner:NewLearner@cluster0.dmfp7.mongodb.net/?authSource=admin&retryWrites=true&w=majority&appName=Cluster0&tls=true"
+const mongoURI = "........................................................................tls=true" //add your own mogoURI
 
 // defining database and collections
-const mongoDB = "EquationRecords"
-const dbCollection = "EquationRecords"
+const mongoDB = "YourDBName"
+const dbCollection = "YourCollectionName"
 
 func DBConnect() (*mongo.Client, context.Context, context.CancelFunc) {
-	ctx, cancel := context.WithTimeout(context.Background(), 180*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 180*time.Second) //adjust time as needed make sure continue request before code slips to cancel
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(mongoURI))
 	if err != nil {
 		log.Fatal(err)
@@ -92,7 +92,7 @@ func TestConnection(client *mongo.Client, ctx context.Context) bool {
 	log.Println("Successfully connected to MongoDB")
 	return true
 }
-
+//test
 // func main() {
 // 	client, ctx, cancel := dbConnect()
 // 	defer cancel()
